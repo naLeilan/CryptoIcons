@@ -1,0 +1,262 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #262626;
+  height: 100vh;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+p {
+  font-size: 2.5rem;
+  font-family: Roboto;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 6s linear infinite;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+ul li {
+  /* margin: 0 4px; */
+  width: 80px;
+  text-align: center;
+}
+
+ul li a {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background-color: #333;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #666;
+  transition: 0.3s;
+}
+
+ul li label .fa,
+ul li label input[type="checkbox"] {
+  text-align: center;
+}
+
+ul li label .fa {
+  font-size: 30px;
+  color: #222;
+  transition: 0.5s;
+}
+
+ul li label input[type="checkbox"] {
+  display: none;
+}
+
+ul li label .check {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(#000, #333);
+  border-radius: 50%;
+  margin: 10px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li label .check::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1b1b1b;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+ul li label .check::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background-color: #222;
+  border-radius: 50%;
+  z-index: 2;
+  border: 2px solid #161616;
+}
+
+/**********/
+ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+/********/
+svg {
+  border-radius: 50%;
+  fill: #222;
+  transition: background-color 0.3s;
+}
+
+svg:hover {
+  fill: #e5fce9;
+  transition: background-color 0.3s;
+}
+
+/***** yellow *****/
+.ylw::before {
+  background-color: #ffee10;
+}
+
+.ylw:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+
+.ylw:hover {
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+/***** silvr *****/
+.silvr::before {
+  background-color: #e5fce9;
+}
+
+.silvr:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #e5fce9;
+}
+
+.silvr:hover {
+  color: #e5fce9;
+  box-shadow: 0 0 5px #e5fce9;
+  text-shadow: 0 0 5px #e5fce9;
+}
+/***** green2 *****/
+.grn2::before {
+  background-color: #35fa56;
+}
+
+.grn2:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #35fa56;
+}
+
+.grn2:hover {
+  color: #35fa56;
+  box-shadow: 0 0 5px #35fa56;
+  text-shadow: 0 0 5px #35fa56;
+}
+/***** green *****/
+.grn {
+  padding: 8px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s, box-shadow 0.3s;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.grn::before {
+  content: ""; /* Add this to create the pseudo-element */
+  position: absolute; /* Add this to position the pseudo-element relative to its parent */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px; /* Match the border-radius of the parent */
+  background-color: #35fa56;
+  z-index: -1; /* Send the pseudo-element behind its parent */
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transitions for smooth animation */
+}
+
+.grn:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #35fa56;
+}
+
+.grn:hover {
+  color: #35fa56;
+  box-shadow: 0 0 5px #35fa56;
+  text-shadow: 0 0 5px #35fa56;
+}
+
+/* .grn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background-color 0.3s;
+  height: 30px;
+  width: 100px;
+  align-content: center;
+}
+
+.grn::before {
+  background-color: #35fa56;
+}
+
+.grn:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #35fa56;
+}
+
+.grn:hover {
+  color: #35fa56;
+  box-shadow: 0 0 5px #35fa56;
+  text-shadow: 0 0 5px #35fa56;
+} */
+/**************/
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+@keyframes glow {
+  0% {
+  }
+
+  25% {
+  }
+
+  75% {
+  }
+
+  100% {
+    background-position: 500%;
+  }
+}
